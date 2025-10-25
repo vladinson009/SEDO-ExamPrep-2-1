@@ -13,14 +13,14 @@ addBtn.addEventListener('click', () => {
 });
 
 // Toggle complete
-list.addEventListener('click', e => {
+list.addEventListener('click', (e) => {
   if (e.target.tagName === 'LI') {
     e.target.classList.toggle('completed');
   }
 });
 
 // Delete on double-click
-list.addEventListener('dblclick', e => {
+list.addEventListener('dblclick', (e) => {
   if (e.target.tagName === 'LI') {
     e.target.remove();
   }
@@ -29,6 +29,7 @@ list.addEventListener('dblclick', e => {
 // Clear all completed tasks
 const clearBtn = document.getElementById('clear-completed-btn');
 clearBtn.addEventListener('click', () => {
-  document.querySelectorAll('#task-list li.completed')
-    .forEach(li => li.remove());
+  document.querySelectorAll('#task-list li.completed').forEach((li) => li.remove());
 });
+
+// Branch 2
